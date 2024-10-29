@@ -20,6 +20,11 @@ Download Ollama from their [Website](https://ollama.com/library/llama3.2)
 ollama run llama3.2
 ```
 
+Create a virtual env
+```bash
+python3 -m venv venv 
+```
+
 After that run the project 
 
 ```bash
