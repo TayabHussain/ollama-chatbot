@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="app-container">
+        <div class="sidebar" id="sidebar">
+            <button class="new-chat-btn" id="new-chat-btn">+ New Chat</button>
+            <div class="chat-history" id="chat-history"></div>
+            
+            <!-- Add Data Management Section -->
+            <div class="data-management">
+               
+                <div class="data-stats" id="data-stats">
+                    <!-- Stats will be inserted here -->
+                </div>
+                <button class="data-btn" onclick="downloadChatHistory()">
+                    💾 Export Data
+                </button>
+                <button class="data-btn warning" onclick="clearAllData()">
+                    🗑️ Clear All Data
+                </button>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="chat-container">
+                <div id="chat-messages"></div>
+                <div class="input-area">
+                    <input type="text" id="user-input" placeholder="Ask me anything...">
+                    <button id="send-button">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
